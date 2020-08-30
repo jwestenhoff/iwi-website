@@ -7,8 +7,9 @@ header:
   image: '/assets/backgrounds/vorkurs.jpg'
 ---
 ## Allgemein
-Hinweis:
-Der Vorkurs ist gerade noch in der Planung<br />
+[icon:note|Der Vorkurs ist gerade noch in der Planung!]()
+[icon:warning|Der Vorkurs ist gerade noch in der Planung!]()
+[icon:error|Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.]()
 
 Um Erstis, die zuvor noch nie etwas programmiert haben, den Einstieg zu vereinfachen, bieten wir einen Programmierkurs an.<br />
 Keine Angst, in den Vorlesungen wird nicht vorausgesetzt, dass du schon programmieren kannst!<br />
