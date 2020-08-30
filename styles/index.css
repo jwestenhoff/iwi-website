@@ -129,4 +129,12 @@ nav .active a:after {
     @apply border-red-700 border-b-4 block;
 }
 
+.special-message {
+    @apply flex text-red-700 text-2xl items-center cursor-pointer my-6 bg-gray-400 p-4
+}
+
+.special-message span {
+    @apply text-black text-xl ml-4
+}
+
 @import "tailwindcss/utilities";
