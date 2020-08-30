@@ -7,8 +7,11 @@ import {
   faPhone,
   faAt,
   faArrowDown,
+  faTimesCircle,
+  faExclamationTriangle
 } from '@fortawesome/free-solid-svg-icons'
 import {faDiscord} from "@fortawesome/free-brands-svg-icons";
+import {faStickyNote} from "@fortawesome/free-regular-svg-icons";
 
 /* The static page module became bigger as expected.
  * First, it was just a Wrapper for creating a Markdown
@@ -145,6 +148,21 @@ function intelligentLink(props) {
 
   const iconLink = props.children[0].props.value.split('|')
 
+  var specialMessageIcons = new Map([
+    [ "icon:note", faExclamationTriangle ],
+    [ "icon:warning", faStickyNote ],
+    [ "icon:error", faTimesCircle ]
+  ])
+
+  if (specialMessageIcons.has(iconLink[0])) {
+    return (
+        <div className="special-message">
+          <FontAwesomeIcon icon={ specialMessageIcons.get(iconLink[0]) } />
+          <span>
+        { iconLink[1] }
+      </span>
+        </div>
+    )
   }
 
   var normalIcons = new Map([
