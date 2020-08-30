@@ -1,8 +1,13 @@
 import ReactMarkdown from 'react-markdown/with-html'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLink, faPhone, faAt, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import Groups from './groups'
 import EventArea from './event-area'
+import {
+  faLink,
+  faPhone,
+  faAt,
+  faArrowDown,
+} from '@fortawesome/free-solid-svg-icons'
 import {faDiscord} from "@fortawesome/free-brands-svg-icons";
 
 /* The static page module became bigger as expected.
@@ -139,28 +144,20 @@ function intelligentLink(props) {
   }
 
   const iconLink = props.children[0].props.value.split('|')
-  var icon = null
 
-  switch (iconLink[0]) {
-    case "icon:link":
-      icon = faLink
-      break
-    case "icon:download":
-      icon = faArrowDown
-      break
-    case "icon:phone":
-      icon = faPhone
-      break
-    case "icon:at":
-      icon = faAt
-      break
-    case "icon:discord":
-      icon = faDiscord
-      break
-    default:
-      icon = faLink
-      break
   }
+
+  var normalIcons = new Map([
+    [ "icon:link", faLink ],
+    [ "icon:download", faArrowDown ],
+    [ "icon:phone", faPhone ],
+    [ "icon:at", faAt ],
+    [ "icon:discord", faDiscord ]
+  ])
+
+  var icon = normalIcons.has(iconLink[0])
+      ? normalIcons.get(iconLink[0])
+      : faLink
 
   return (
     <a 
